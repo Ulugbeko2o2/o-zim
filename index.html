@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode:'class',
           theme: {
             extend: {
               colors: {
@@ -18,8 +19,8 @@
       </script>
     <title>O'zim haqimda</title>
 </head>
-<body class="bg-black">
-    <nav class="max-w-[1550px] mx-auto items-center py-[10px] flex justify-between px-[50px] sticky z-10 top-0 w-[100%]   text-white   ">
+<body class="bg-black dark:bg-teal-400">
+    <nav class="max-w-[1550px] mx-auto items-center py-[10px] flex justify-between px-[50px] sticky z-10 top-0 w-[100%]   text-white dark:text-black   ">
         <div class="flex">
             <div class="hidden xl:flex" >
                 <img src="" alt="logo">
@@ -40,8 +41,11 @@
                <a href="#"><i class="fa-brands fa-instagram"></i></a>
                <a href="#"><i class="fa-brands fa-twitter"></i></a>
             </div>
-            <div>
+            <div class="flex gap-10">
                 <button class="border-2 py-[8px] px-[30px] rounded-xl hover:bg-red-500 hover:border-red-500 hover:-translate-y-[2px] duration-700 hidden xl:flex">Hozir sotib olin</button>
+            </div>
+            <div>
+                <button class="border-2 text-center py-1 px-2 rounded-xl " onclick="darkMode()">dark</button>
             </div>
             <div class="hidden ">
                 <i class="fa-solid fa-bars"></i>
@@ -50,8 +54,8 @@
      </nav>
     <header class="relative pb-[100px]">
      <div class="container w-[85%] m-auto xl:flex gap-10">
-        <div class="text-white pt-[200px] w-[50%]">
-            <p class="text-white/50 text-[24px] uppercase">Mening dunyoyimga xush kelibsiz</p>
+        <div class="text-white pt-[200px] w-[50%] dark:text-black">
+            <p class="text-white/50 text-[24px] uppercase dark:text-black">Mening dunyoyimga xush kelibsiz</p>
             <h1 class=" text-[40px] font-bold py-[20px]">
                 Salom man Maxmudov Ulug'bek <span class="text-red-500">
                     UI/UX dizayner, Veb-sayt yaratuvchi, Kontent yozuvchi
@@ -64,33 +68,33 @@
         </div>
      </div>
     </header>
-    <section class="men xaqimda bg-stone-950 max-w-[1550px] mx-auto ">
+    <section class="men xaqimda bg-stone-950 max-w-[1550px] mx-auto dark:bg-teal-400 ">
         <div class=" container w-[85%] m-auto">
-           <div class="text-white  gap-14 justify-between py-[100px] xl:flex ">
+           <div class="text-white dark:text-black  gap-14 justify-between py-[100px] xl:flex ">
             <div class="">
                 <img src="./images/about-9.jpg" alt="">
             </div>
-            <div class="xl:w-[55%] py-[50px]">
-              <div class="py-[50px]">
+            <div class="xl:w-[55%] py-[50px] ">
+              <div class="py-[50px] ">
                 <h2 class="text-[45px] font-bold">
                     Man Haqimda
                 </h2>
-                <p class="text-white/50 text-[20px]">Man <span class="text-red-500 font-bold">Maxmudov Ulugbek</span> Farg'ona viloyati Qo'qon shaxrida tug'ilganman   </p>
+                <p class="text-white/50 text-[20px]  dark:text-black ">Man <span class="text-red-500 font-bold">Maxmudov Ulugbek</span> Farg'ona viloyati Qo'qon shaxrida tug'ilganman   </p>
               </div>
-              <div class="gap-10 xl:flex">
+              <div class="gap-10 xl:flex ">
                 <h2 class="text-[18px] font-bold hover:text-red-500 hover:underline">Asosiy konikmalar</h2>
                 <h2 class="text-[18px] font-bold hover:text-red-500 hover:underline">Mukofotlarim</h2>
                 <h2 class="text-[18px] font-bold hover:text-red-500 hover:underline">Tajriba</h2>
                 <h2 class="text-[18px] font-bold hover:text-red-500 hover:underline">Ta'lim va Sertifikatlash</h2>
               </div>
-              <div class="xl:w-[50%]">
-                <p class="py-[10px] text-white/50 text-[18px]"><span class="font-bold">Foydalanuvchi tajribasi dizayni</span>-UI / ux
+              <div class="xl:w-[50%] ">
+                <p class="py-[10px]  dark:text-black  text-white/50 text-[18px]"><span class="font-bold">Foydalanuvchi tajribasi dizayni</span>-UI / ux
                     foydalanuvchini quvontiradi va uni ishlaydi</p>
-                    <p class="py-[10px] text-white/50 text-[18px]">
+                    <p class="py-[10px]  dark:text-black  text-white/50 text-[18px]">
                        <span class="font-bold"> Veb va foydalanuvchi interfeysi dizayn</span>i-veb
                         -saytlar, veb-tajribalar,...
                     </p>
-                    <p class="py-[10px] text-white/50 text-[18px]">
+                    <p class="py-[10px]  dark:text-black  text-white/50 text-[18px]">
                       <span class="font-bold">  O'zaro ta'sir dizayni</span>-animatsiya
                         men uni ko'chirishni yaxshi ko'raman.
                     </p>
@@ -101,11 +105,11 @@
     </section>
     <main>
         <div class="container w-[85%] m-auto">
-            <div class="text-white py-[50px] text-center">
+            <div class="text-white py-[50px] text-center  dark:text-black ">
                 <h2 class="text-[38px] font-bold">
                     Mening Ajoyib Xizmatim
                 </h2>
-                <p class="text-white/50 py-[10px] text-[18px]">Mavjud Lore Ipsum oyatlarning ko'p tafovutlar bor, lekin ko'p o'zgarish uchradi.</p>
+                <p class="text-white/50 py-[10px]  dark:text-black  text-[18px]">Mavjud Lore Ipsum oyatlarning ko'p tafovutlar bor, lekin ko'p o'zgarish uchradi.</p>
             </div>
             <div class="grid gap-10 xl:grid-cols-3 md:grid-cols-2">
                 <div class="text-white bg-neutral-950 py-[30px] px-[40px] rounded-xl hover:bg-red-500 hover:text-white duration-700">
@@ -143,9 +147,9 @@
         </div>
     </main>
     <div class="aloqa pt-[100px]">
-        <div class="bg-neutral-950">
+        <div class="bg-neutral-950 dark:bg-teal-400">
             <div class="xl:flex gap-10 text-white container w-[85%] mx-auto py-10">
-                <div class=" flex flex-col gap-10">
+                <div class=" flex flex-col gap-10 dark:text-black ">
                     <h2 class="text-[24px] font-bold">Manga taklif berish uchun</h2>
                     <p>Man mustaqil ish uchun mavjudman. Telefon orqali men bilan ulang: +998900580202 yoki elektron pochta: Uasadcha@gmail.com
                     </p>
@@ -165,6 +169,12 @@
 
 
 
-
+    <script>
+        let html = document.documentElement;
+        function darkMode(){
+            html.classList.toggle('dark')
+            html.classList.toggle('light')
+        }
+    </script>
 </body>
 </html>
